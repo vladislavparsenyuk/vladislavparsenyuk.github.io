@@ -1,0 +1,89 @@
+
+#butterfly {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate3d(0,0,0);
+    transition: left 1s ease-in-out, top 1s ease-in-out, transform 0.4s ease-out, opacity 0.5s;
+
+	-webkit-perspective: 150px;
+	   -moz-perspective: 150px;
+	    -ms-perspective: 150px;
+            perspective: 150px;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+#butterfly.fly {
+    pointer-events: none;
+    transition: left 1s ease-in-out, top 1s ease-in-out, transform 0.2s ease-out, opacity 0.5s;
+}
+#butterfly[data-type="invisible"] {
+    opacity: 0;
+    transition: left 1s ease-in-out, top 1s ease-in-out, transform 0.2s ease-out, opacity 0.5s 1s;
+}
+#butterfly::before,
+#butterfly::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    width: 50px;
+    height: 100px;
+    background-image: url("/img/butterfly.png");
+    background-repeat: no-repeat;
+    background-size: 200% auto;
+}
+#butterfly::before {
+    right: 0;
+    background-position: left center;
+    transform-origin: right center;
+    animation: butterfly-left-wing-wave 10s 1s infinite;
+}
+#butterfly::after {
+    left: 0;
+    background-position: right center;
+    transform-origin: left center;
+    animation: butterfly-right-wing-wave 10s 1s infinite;
+}
+#butterfly.fly::before {
+    animation: butterfly-left-wing-fly 0.2s infinite;
+}
+#butterfly.fly::after {
+    animation: butterfly-right-wing-fly 0.2s infinite;
+}
+
+@keyframes butterfly-left-wing-wave {
+    15% { transform: rotateY(45deg); }
+    30% { transform: rotateY(10deg); }
+	40% { transform: rotateY(30deg); }
+	60% { transform: rotateY(20deg); }
+	70% { transform: rotateY(20deg); }
+	80% { transform: rotateY(80deg); }
+}
+@keyframes butterfly-right-wing-wave {
+    15% { transform: rotateY(-45deg); }
+    30% { transform: rotateY(-10deg); }
+	40% { transform: rotateY(-30deg); }
+	60% { transform: rotateY(-20deg); }
+	70% { transform: rotateY(-20deg); }
+	80% { transform: rotateY(-80deg); }
+}
+
+@keyframes butterfly-left-wing-fly {
+	50% { transform: rotateY(80deg); }
+}
+@keyframes butterfly-right-wing-fly {
+	50% { transform: rotateY(-80deg); }
+}
+
+@media print {
+    #butterfly {
+        display: none;
+    }
+}
