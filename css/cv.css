@@ -4,9 +4,14 @@ html, body {
 	background-color: #fff;
     font-family: "Open Sans", sans-serif;
     min-width: 1020px;
+
     -webkit-print-color-adjust: exact;
-    -moz-print-color-adjust: exact;
-    -ms-print-color-adjust: exact;
+       -moz-print-color-adjust: exact;
+        -ms-print-color-adjust: exact;
+
+    -webkit-text-size-adjust: none;
+       -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
 }
 
 *, *::before, *::after {
@@ -20,7 +25,7 @@ html, body {
     position: relative;
     overflow: hidden;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.5;
     color: #222;
 }
@@ -34,7 +39,8 @@ html, body {
 }
 #cv section {
     position: relative;
-    margin: 80px 0;
+    margin-top: 80px;
+    margin-bottom: 80px;
     margin-left: 250px;
     page-break-inside: avoid;
 }
@@ -44,12 +50,12 @@ html, body {
     top: 0px;
     right: 100%;
     margin-right: 30px;
+    text-align: right;
     font-size: 40px;
     font-weight: 800;
     line-height: 1;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-align: right;
     color: #e6e6e6;
 }
 
@@ -385,7 +391,7 @@ html, body {
     margin-right: 5px;
 }
 #cv section.feedbacks .feedback .feedback-body {
-    
+    font-size: 16px;
 }
 #cv section.feedbacks .feedback.short .feedback-body {
     height: 15em;
@@ -396,6 +402,21 @@ html, body {
 /* Contacts */
 #cv section.contacts {
     z-index: 1;
+    padding-right: 350px;
+}
+#cv section.contacts .contact {
+    position: relative;
+    padding-left: 35px;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    font-size: 16px;
+}
+#cv section.contacts .contact [class^="icon-"] {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -0.5em;
+    color: #999;
 }
 
 
@@ -423,9 +444,6 @@ html, body {
     margin-top: 0.8em;
     margin-bottom: 0.8em;
 }
-#cv .list.list-icons > li {
-    padding-left: 35px;
-}
 #cv .list > li::before {
     content: "";
     position: absolute;
@@ -436,16 +454,6 @@ html, body {
     height: 8px;
     border-radius: 50%;
     background-color: #ddd;
-}
-#cv .list.list-icons > li::before {
-    display: none;
-}
-#cv .list > li [class^="icon-"] {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: -0.5em;
-    color: #999;
 }
 
 #tree {

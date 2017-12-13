@@ -10,7 +10,7 @@ $(function () {
         $yooDo        = $cv.find('.record:eq(1)'),
         $makeMeSmart  = $cv.find('.record:eq(2)'),
         $screenshot   = $cv.find('.record:first .screenshot:last'),
-        $email        = $cv.find('.contacts > ul > li:first'),
+        $email        = $cv.find('.contact:first'),
         $feedback     = $cv.find('.feedback:first'),
         $photoshop    = $cv.find('.skills > span:last'),
         $entanglement = $cv.find('.entanglement');
