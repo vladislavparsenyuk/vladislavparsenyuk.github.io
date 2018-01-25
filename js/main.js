@@ -9,7 +9,7 @@ $(function () {
         $demos        = $cv.find('.record:eq(0)'),
         $yooDo        = $cv.find('.record:eq(1)'),
         $makeMeSmart  = $cv.find('.record:eq(2)'),
-        $screenshot   = $cv.find('.record:first .screenshot:last'),
+        $screenshot   = $cv.find('.record:first .screenshot:eq(4)'),
         $email        = $cv.find('.contact:first'),
         $feedback     = $cv.find('.feedback:first'),
         $photoshop    = $cv.find('.skills > span:last'),
