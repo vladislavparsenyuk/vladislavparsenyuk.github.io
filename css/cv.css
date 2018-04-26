@@ -42,7 +42,7 @@ html, body {
     margin-top: 80px;
     margin-bottom: 80px;
     margin-left: 250px;
-    /* page-break-inside: avoid; */
+    page-break-inside: avoid;
 }
 #cv section::before {
     content: attr(data-label);
@@ -560,6 +560,11 @@ html, body {
 
 @media print {
     .unprintable {
+        display: none !important;
+    }
+}
+@media not print {
+    .onlyprint {
         display: none !important;
     }
 }
