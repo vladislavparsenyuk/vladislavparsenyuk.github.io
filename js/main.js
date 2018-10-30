@@ -6,10 +6,10 @@ $(function () {
         $about        = $cv.find('.about'),
         $name         = $cv.find('.header-name'),
         $es6          = $cv.find('.skills > span:eq(1)'),
-        $demos        = $cv.find('.record:eq(0)'),
-        $yooDo        = $cv.find('.record:eq(1)'),
-        $makeMeSmart  = $cv.find('.record:eq(2)'),
-        $screenshot   = $cv.find('.record:first .screenshot:eq(4)'),
+        $demos        = $cv.find('.record[data-name="demos"]'),
+        $yooDo        = $cv.find('.record[data-name="yoodo"]'),
+        $makeMeSmart  = $cv.find('.record[data-name="makemesmart"]'),
+        $screenshot   = $cv.find('.record[data-name="demos"] .screenshot:eq(4)'),
         $email        = $cv.find('.contact:first'),
         $feedback     = $cv.find('.feedback:first'),
         $photoshop    = $cv.find('.skills > span:last'),
@@ -39,8 +39,8 @@ $(function () {
     $tree
         .on('click', () => $tree.addClass('rocking'))
         .on('animationend', () => $tree.removeClass('rocking'));
-    
-    
+
+
     // Toggle screenshot size & launch video
     $cv.on('click touchend', '.screenshot', (e) => {
         // on mobile devices video without controls
