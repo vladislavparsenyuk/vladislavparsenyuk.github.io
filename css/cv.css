@@ -431,7 +431,7 @@ html, body {
 #cv section.feedbacks .feedback[data-person="nadia"] .feedback-avatar { background-image: url("/img/avatars/nadia.jpg"); }
 #cv section.feedbacks .feedback[data-person="ksenia"] .feedback-avatar { background-image: url("/img/avatars/ksenia.jpg"); }
 #cv section.feedbacks .feedback[data-person="oystein"] .feedback-avatar { background-image: url("/img/avatars/oystein.jpg"); }
-#cv section.feedbacks .feedback[data-person="devin"] .feedback-avatar { background-image: url("/img/avatars/devin.jpg"); }
+#cv section.feedbacks .feedback[data-person="devin"] .feedback-avatar { background-image: url("/img/avatars/devin.jpeg"); }
 
 #cv section.feedbacks .feedback .feedback-name {
     font-size: 30px;
